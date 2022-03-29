@@ -1,4 +1,7 @@
 ﻿using DesignPatterns.Behavoural.ChainOfResponsibility;
+using DesignPatterns.Behavoural.Command;
+using DesignPatterns.Behavoural.Command.SetTopBox;
+using DesignPatterns.Behavoural.Command.SetTopBox.SetTopCommands;
 using DesignPatterns.Behavoural.Observer.Observer;
 using DesignPatterns.Behavoural.Observer.Subject;
 using DesignPatterns.Behavoural.Strategy;
@@ -53,12 +56,12 @@ namespace DesignPatterns
             //IMyPizza pizza = factory.CreatePizza("ny");
             //pizza.Prepare();
 
-            // The abstract factory code
-            PizzaStore store1 = new NYPizzaStore();
-            store1.OrderPizza("cheeze");
+            //// The abstract factory code
+            //PizzaStore store1 = new NYPizzaStore();
+            //store1.OrderPizza("cheeze");
 
-            PizzaStore store2 = new ChicagoPizzaStore();
-            store2.OrderPizza("cheeze");
+            //PizzaStore store2 = new ChicagoPizzaStore();
+            //store2.OrderPizza("cheeze");
 
 
             //// Builder pattern
@@ -70,7 +73,7 @@ namespace DesignPatterns
             //// Prototype
             //Prototype prototype = new ConcretePrototype1("I", 11111);
             //Prototype copy = (ConcretePrototype1)prototype.Clone();
-            //Console.WriteLine("Cloned Id: {0} and additionalProperty {1}", copy.Id, copy.additionalProperty);
+            //Console.WriteLine("Cloned Id: {0} and additionalProperty {1}", copy.Id, copy);
             //copy.additionalProperty = 55555;
 
             //Console.WriteLine("Cloned Changed Id: {0} and additionalProperty {1}", copy.Id, copy.additionalProperty);
@@ -79,7 +82,7 @@ namespace DesignPatterns
 
 
 
-            // Adapter
+            ////Adapter
             //// Old system integrated
             //CityDuck duck = new CityDuck();
             //TurkeyUser firstTurkeyUser = new TurkeyUser(duck);
@@ -108,12 +111,14 @@ namespace DesignPatterns
             //IEmployee manager1 = new Manager("Mahendra", "Infosec", new List<IEmployee> { employee1, employee2, employee3 });
             //manager1.Getdetails();
 
-            ////IEmployee manager2 = new Manager("Kevin", "Infosec", new List<IEmployee> { employee4, employee5});
-            ////manager2.Getdetails();
+            //Console.WriteLine("\n\n\n\n");
+
+            //IEmployee manager2 = new Manager("Kevin", "Infosec", new List<IEmployee> { employee4, employee5, manager1 });
+            //manager2.Getdetails();
 
 
 
-            //// Decorator
+            // Decorator
             //Pizza pizza = new PlainPizza();
 
             //ToppingDecorator toppingDecorator = new Mozzarella(pizza);
@@ -122,10 +127,10 @@ namespace DesignPatterns
             //Console.WriteLine(toppingDecorator.GetDescription());
             //Console.WriteLine(toppingDecorator.GetCost());
 
-            ////Pizza pizza = new Mozzarella( new Tomato( new PlainPizza()));
+            //Pizza pizza = new Mozzarella(new Tomato(new PlainPizza()));
 
-            ////Console.WriteLine(pizza.GetDescription());
-            ////Console.WriteLine(pizza.GetCost());
+            //Console.WriteLine(pizza.GetDescription());
+            //Console.WriteLine(pizza.GetCost());
 
 
 
@@ -176,12 +181,17 @@ namespace DesignPatterns
 
             //CaffeineBeverage tea = new Tea();
             //tea.prepareRecipe();
+
+
+            //RemoteControl remote = new RemoteControl();
+            //SetTopBox setTopBox = new SetTopBox();
+
+            //remote.SetCommand(new SetTopBoxOnCommand(setTopBox));
+            //remote.SetCommand(new SetTopBoxOffCommand(setTopBox));
+            //remote.PressButton();
+
+
         }
-
-
-
-
-
 
     }
 }

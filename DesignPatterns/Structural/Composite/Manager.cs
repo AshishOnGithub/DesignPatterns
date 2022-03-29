@@ -21,7 +21,8 @@ namespace DesignPatterns.Structural.Composite
         public void Getdetails()
         {
             Console.WriteLine("Manager Name: " + _name + ", Dept: " + _department);
-            foreach (Employee employee in _employees)
+            Console.WriteLine("\n Employees are ");
+            foreach (IEmployee employee in _employees)
                 employee.Getdetails();
         }
     }
