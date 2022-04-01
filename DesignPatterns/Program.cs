@@ -21,8 +21,11 @@ using DesignPatterns.Structural.Bridge;
 using DesignPatterns.Structural.Composite;
 using DesignPatterns.Structural.Decorator;
 using DesignPatterns.Structural.Facade;
+using DesignPatterns.Structural.Flyweight.EmployeeFactory;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading;
 using static DesignPatterns.Creational.Builder.Vehicle;
 
 namespace DesignPatterns
@@ -139,6 +142,37 @@ namespace DesignPatterns
             //userOrder.AddToCart(3132, 1, 99889);
             //userOrder.PlaceOrder(99889, 888833);
 
+            //// Flyweight
+            //Stopwatch sw = new Stopwatch();
+
+            //sw.Start();
+
+            
+            //for (int i = 0; i < 100000; i++)
+            //{
+            //    DesignPatterns.Structural.Flyweight.IEmployee employee;
+            //    if (i%2 == 0)
+            //        employee = EmployeeFactory.GetEmployee("Developer");
+            //    else
+            //        employee = EmployeeFactory.GetEmployee("Tester");
+
+            //    if (i % 3 == 0)
+            //    {
+            //        employee.assignSkill("Java");
+            //        employee.assignJob("Eclipse");
+            //    }
+            //    else
+            //    {
+            //        employee.assignSkill("c#");
+            //        employee.assignJob(".Net");
+            //    }
+
+            //    employee.task();
+            //}
+
+            //sw.Stop();
+            //TimeSpan timeTaken = sw.Elapsed;
+            //Console.WriteLine(timeTaken.ToString(@"m\:ss\.fff"));
 
             //// Behavoural
 
