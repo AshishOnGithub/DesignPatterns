@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Structural.Adapter.Vendor
 {
-    class WildTurkey : Turkey
+    class WildTurkey: Turkey
     {
         public void Fly()
         {

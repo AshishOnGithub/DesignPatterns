@@ -7,6 +7,8 @@ using DesignPatterns.Behavoural.Observer.Subject;
 using DesignPatterns.Behavoural.Strategy;
 using DesignPatterns.Behavoural.Strategy.FlyStrategy;
 using DesignPatterns.Behavoural.TemplateMethod;
+using DesignPatterns.Behavoural.Visitor;
+using DesignPatterns.Behavoural.Visitor.Visitors;
 using DesignPatterns.Creational;
 using DesignPatterns.Creational.AbstractFactory.PizzaStore;
 using DesignPatterns.Creational.Builder;
@@ -22,6 +24,7 @@ using DesignPatterns.Structural.Composite;
 using DesignPatterns.Structural.Decorator;
 using DesignPatterns.Structural.Facade;
 using DesignPatterns.Structural.Flyweight.EmployeeFactory;
+using DesignPatterns.Structural.Proxy;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -35,6 +38,7 @@ namespace DesignPatterns
         // Singleton client 
         static void Main(string[] args)
         {
+
             //// The Singleton client code
             //Singleton s1 = Singleton.GetInstance();
             //Singleton s2 = Singleton.GetInstance();
@@ -76,7 +80,7 @@ namespace DesignPatterns
             //// Prototype
             //Prototype prototype = new ConcretePrototype1("I", 11111);
             //Prototype copy = (ConcretePrototype1)prototype.Clone();
-            //Console.WriteLine("Cloned Id: {0} and additionalProperty {1}", copy.Id, copy);
+            //Console.WriteLine("Cloned Id: {0} and additionalProperty {1}", copy.Id, copy.additionalProperty);
             //copy.additionalProperty = 55555;
 
             //Console.WriteLine("Cloned Changed Id: {0} and additionalProperty {1}", copy.Id, copy.additionalProperty);
@@ -121,7 +125,7 @@ namespace DesignPatterns
 
 
 
-            // Decorator
+            //Decorator
             //Pizza pizza = new PlainPizza();
 
             //ToppingDecorator toppingDecorator = new Mozzarella(pizza);
@@ -147,7 +151,7 @@ namespace DesignPatterns
 
             //sw.Start();
 
-            
+
             //for (int i = 0; i < 100000; i++)
             //{
             //    DesignPatterns.Structural.Flyweight.IEmployee employee;
@@ -173,6 +177,16 @@ namespace DesignPatterns
             //sw.Stop();
             //TimeSpan timeTaken = sw.Elapsed;
             //Console.WriteLine(timeTaken.ToString(@"m\:ss\.fff"));
+
+
+            //// Proxy pattern
+            //IDatabaseExecutor databaseExecutor1 = new DatabaseExecuterProxy("Ashish", "1234");
+            //databaseExecutor1.ExecuteDatabase("query");
+
+            //IDatabaseExecutor databaseExecutor2 = new DatabaseExecuterProxy("Ashish", "4444");
+            //databaseExecutor2.ExecuteDatabase("query");
+
+
 
             //// Behavoural
 
@@ -223,6 +237,19 @@ namespace DesignPatterns
             //remote.SetCommand(new SetTopBoxOnCommand(setTopBox));
             //remote.SetCommand(new SetTopBoxOffCommand(setTopBox));
             //remote.PressButton();
+
+
+            //// Visitor 
+
+            //Visitor visitor = new TaxVisitor();
+
+            //Visitable soap = new Necessity(2.0);
+            //Visitable plates = new Utensils(5.0);
+
+
+            //Console.WriteLine(soap.Accept(visitor));
+            //Console.WriteLine(plates.Accept(visitor));
+
 
 
         }
