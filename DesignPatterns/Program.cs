@@ -89,7 +89,7 @@ namespace DesignPatterns
 
 
 
-            ////Adapter
+            //Adapter
             //// Old system integrated
             //CityDuck duck = new CityDuck();
             //TurkeyUser firstTurkeyUser = new TurkeyUser(duck);
@@ -146,37 +146,37 @@ namespace DesignPatterns
             //userOrder.AddToCart(3132, 1, 99889);
             //userOrder.PlaceOrder(99889, 888833);
 
-            //// Flyweight
-            //Stopwatch sw = new Stopwatch();
+            // Flyweight
+            Stopwatch sw = new Stopwatch();
 
-            //sw.Start();
+            sw.Start();
 
 
-            //for (int i = 0; i < 100000; i++)
-            //{
-            //    DesignPatterns.Structural.Flyweight.IEmployee employee;
-            //    if (i%2 == 0)
-            //        employee = EmployeeFactory.GetEmployee("Developer");
-            //    else
-            //        employee = EmployeeFactory.GetEmployee("Tester");
+            for (int i = 0; i < 10000; i++)
+            {
+                DesignPatterns.Structural.Flyweight.IEmployee employee;
+                if (i % 2 == 0)
+                    employee = EmployeeFactory.GetEmployee("Developer");
+                else
+                    employee = EmployeeFactory.GetEmployee("Tester");
 
-            //    if (i % 3 == 0)
-            //    {
-            //        employee.assignSkill("Java");
-            //        employee.assignJob("Eclipse");
-            //    }
-            //    else
-            //    {
-            //        employee.assignSkill("c#");
-            //        employee.assignJob(".Net");
-            //    }
+                if (i % 3 == 0)
+                {
+                    employee.assignSkill("Java");
+                    employee.assignJob("Eclipse");
+                }
+                else
+                {
+                    employee.assignSkill("c#");
+                    employee.assignJob(".Net");
+                }
 
-            //    employee.task();
-            //}
+                employee.task();
+            }
 
-            //sw.Stop();
-            //TimeSpan timeTaken = sw.Elapsed;
-            //Console.WriteLine(timeTaken.ToString(@"m\:ss\.fff"));
+            sw.Stop();
+            TimeSpan timeTaken = sw.Elapsed;
+            Console.WriteLine(timeTaken.ToString(@"m\:ss\.fff"));
 
 
             //// Proxy pattern
@@ -230,7 +230,7 @@ namespace DesignPatterns
             //CaffeineBeverage tea = new Tea();
             //tea.prepareRecipe();
 
-
+            //// Command pattern
             //RemoteControl remote = new RemoteControl();
             //SetTopBox setTopBox = new SetTopBox();
 
