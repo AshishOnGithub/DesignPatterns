@@ -146,37 +146,37 @@ namespace DesignPatterns
             //userOrder.AddToCart(3132, 1, 99889);
             //userOrder.PlaceOrder(99889, 888833);
 
-            // Flyweight
-            Stopwatch sw = new Stopwatch();
+            //// Flyweight
+            //Stopwatch sw = new Stopwatch();
 
-            sw.Start();
+            //sw.Start();
 
 
-            for (int i = 0; i < 10000; i++)
-            {
-                DesignPatterns.Structural.Flyweight.IEmployee employee;
-                if (i % 2 == 0)
-                    employee = EmployeeFactory.GetEmployee("Developer");
-                else
-                    employee = EmployeeFactory.GetEmployee("Tester");
+            //for (int i = 0; i < 10000; i++)
+            //{
+            //    DesignPatterns.Structural.Flyweight.IEmployee employee;
+            //    if (i % 2 == 0)
+            //        employee = EmployeeFactory.GetEmployee("Developer");
+            //    else
+            //        employee = EmployeeFactory.GetEmployee("Tester");
 
-                if (i % 3 == 0)
-                {
-                    employee.assignSkill("Java");
-                    employee.assignJob("Eclipse");
-                }
-                else
-                {
-                    employee.assignSkill("c#");
-                    employee.assignJob(".Net");
-                }
+            //    if (i % 3 == 0)
+            //    {
+            //        employee.assignSkill("Java");
+            //        employee.assignJob("Eclipse");
+            //    }
+            //    else
+            //    {
+            //        employee.assignSkill("c#");
+            //        employee.assignJob(".Net");
+            //    }
 
-                employee.task();
-            }
+            //    employee.task();
+            //}
 
-            sw.Stop();
-            TimeSpan timeTaken = sw.Elapsed;
-            Console.WriteLine(timeTaken.ToString(@"m\:ss\.fff"));
+            //sw.Stop();
+            //TimeSpan timeTaken = sw.Elapsed;
+            //Console.WriteLine(timeTaken.ToString(@"m\:ss\.fff"));
 
 
             //// Proxy pattern
@@ -211,15 +211,15 @@ namespace DesignPatterns
 
 
             ////Chain of responsibility
-            //IChain chainCalc1 = new AddNumbers();
-            //IChain chainCalc2 = new SubtractNumbers();
-            //IChain chainCalc3 = new MultiplyNumber();
+            //IChain chainCalc1 = new Authentication();
+            //IChain chainCalc2 = new Authorization();
+            //IChain chainCalc3 = new Validation();
 
             //chainCalc1.SetNextChain(chainCalc2);
             //chainCalc2.SetNextChain(chainCalc3);
 
-            //Numbers request = new Numbers(4, 2, "Mul");
-            //chainCalc1.Calculate(request);
+            //Request request = new Request(1, "1234", "{item1, item2}", "user");
+            //chainCalc1.ProcessNext(request);
 
 
 
@@ -239,16 +239,7 @@ namespace DesignPatterns
             //remote.PressButton();
 
 
-            //// Visitor 
-
-            //Visitor visitor = new TaxVisitor();
-
-            //Visitable soap = new Necessity(2.0);
-            //Visitable plates = new Utensils(5.0);
-
-
-            //Console.WriteLine(soap.Accept(visitor));
-            //Console.WriteLine(plates.Accept(visitor));
+            
 
 
 

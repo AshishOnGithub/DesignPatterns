@@ -6,17 +6,19 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Behavoural.ChainOfResponsibility
 {
-    public class Numbers
+    public class Request
     {
-        public int number1 { get; set; }
-        public int number2 { get; set; }
-        public string CalculationWanted { get; set; }
+        public int userId { get; set; }
+        public string password{ get; set; }
+        public string role { get; set; }
+        public string orderData { get; set; }
 
-        public Numbers(int newNumber1, int newNumber2, string calcWanted)
+        public Request(int userId, string password, string orderData, string role)
         {
-            number1 = newNumber1;
-            number2 = newNumber2;
-            CalculationWanted = calcWanted;
+            this.userId = userId;
+            this.password = password;
+            this.orderData = orderData;
+            this.role = role;
         }
 
     }

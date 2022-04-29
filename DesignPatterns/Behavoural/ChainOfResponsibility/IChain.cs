@@ -9,7 +9,7 @@ namespace DesignPatterns.Behavoural.ChainOfResponsibility
     public interface IChain
     {
         public void SetNextChain(IChain nextChain);
-        public void Calculate(Numbers request);
+        public void ProcessNext(Request request);
     }
 
 }
